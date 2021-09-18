@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:meal_buddies/Screens/Welcome/log_in.dart';
 
+//Import Firebase Authentication
+import 'package:firebase_auth/firebase_auth.dart';
+
 import 'Screens/Welcome/sign_up.dart';
 
-void main() => runApp(MyApp());
+void main() {
+
+  runApp(MyApp());
+}
+
+
+
 
 class MyApp extends StatelessWidget {
   @override
