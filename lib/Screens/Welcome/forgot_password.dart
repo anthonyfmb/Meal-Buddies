@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
 
+/*
+  Name: Anthony
+  Date: 9/18/2021
+  This class is responsible for ForgetPassword Functionality
+
+ */
+
+
 class ForgotPassword extends StatefulWidget {
   @override
   _ForgotPasswordState createState() => new _ForgotPasswordState();
