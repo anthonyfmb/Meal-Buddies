@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         '/signup': (BuildContext context) => Signup()
       },
-      home: Profile(),
+      home: Login(),
       theme: ThemeData(
         primaryColor: Colors.green,
       ),
