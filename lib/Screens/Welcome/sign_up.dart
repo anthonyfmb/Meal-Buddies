@@ -7,6 +7,7 @@ This class is responsible for Sign Up.
 
 */
 
+
 class Signup extends StatefulWidget {
   @override
   _SignupState createState() => _SignupState();
