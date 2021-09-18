@@ -141,7 +141,7 @@ class _SignupState extends State<Signup> {
                         focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(color: Colors.green))),
                   ),
-                  SizedBox(height: 10.0),
+               
                   SizedBox(height: 30.0),
                   Container(
                       // Container that is responsible for the Sign up and go back button
