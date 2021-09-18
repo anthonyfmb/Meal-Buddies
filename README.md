@@ -1,7 +1,15 @@
-testing
+How to run Flutter
 
-Seeing if i can committ
+Clone 
 
-I can commit
+To get packages to run
 
-Test Commit 2
+flutter pub get
+
+To run the application
+
+flutter run
+
+Also, when you push
+
+Make sure to Flutter Clean
