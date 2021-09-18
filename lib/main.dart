@@ -60,6 +60,9 @@ class _MyAppState extends State<MyApp> {
         '/signup': (BuildContext context) => Signup()
       },
       home: Login(),
+      theme: ThemeData(
+        primaryColor: Colors.green,
+      ),
     );
   }
 }

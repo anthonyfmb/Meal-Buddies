@@ -17,12 +17,14 @@ class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: <
-            Widget>[
+        body: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
           Container(
             child: Stack(
               children: <Widget>[
-                Container( // This container is responsible for Sign Up text
+                Container(
+                  // This container is responsible for Sign Up text
                   padding: EdgeInsets.fromLTRB(15.0, 110.0, 0.0, 0.0),
                   child: Text(
                     'Signup',
@@ -30,7 +32,8 @@ class _SignupState extends State<Signup> {
                         TextStyle(fontSize: 80.0, fontWeight: FontWeight.bold),
                   ),
                 ),
-                Container( // This container is responsible for the period at the end of Sign Up Text
+                Container(
+                  // This container is responsible for the period at the end of Sign Up Text
                   padding: EdgeInsets.fromLTRB(260.0, 125.0, 0.0, 0.0),
                   child: Text(
                     '.',
@@ -43,28 +46,27 @@ class _SignupState extends State<Signup> {
               ],
             ),
           ),
-          Container( // Responsible for Text Inputs 
+          Container(
+              // Responsible for Text Inputs
               padding: EdgeInsets.only(top: 35.0, left: 20.0, right: 20.0),
               child: Column(
                 children: <Widget>[
-                  TextField( // Textfield for email
+                  TextField(
+                    // Textfield for email
                     decoration: InputDecoration(
                         labelText: 'EMAIL',
-                        hintText: "Ex: JHSmith@purdue.edu",
                         labelStyle: TextStyle(
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold,
                             color: Colors.grey),
-                        // hintText: 'EMAIL',
-                        // hintStyle: ,
                         focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(color: Colors.green))),
                   ),
                   SizedBox(height: 10.0),
-                  TextField( // Textfield for Password
+                  TextField(
+                    // Textfield for Password
                     decoration: InputDecoration(
                         labelText: 'PASSWORD ',
-                        hintText: "Ex: #password123 ",
                         labelStyle: TextStyle(
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold,
@@ -74,10 +76,15 @@ class _SignupState extends State<Signup> {
                     obscureText: true,
                   ),
                   SizedBox(height: 10.0),
-                  TextField( // Textfeild for Name
+                  TextField(
+                    // Textfeild for Name
                     decoration: InputDecoration(
                         labelText: 'NAME ',
                         hintText: "Ex: John Smith",
+                        hintStyle: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.w200,
+                            color: Colors.grey),
                         labelStyle: TextStyle(
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold,
@@ -86,10 +93,15 @@ class _SignupState extends State<Signup> {
                             borderSide: BorderSide(color: Colors.green))),
                   ),
                   SizedBox(height: 10.0),
-                  TextField( // Text field for major
+                  TextField(
+                    // Text field for major
                     decoration: InputDecoration(
                         labelText: 'Major ',
                         hintText: "Ex: Computer Science",
+                        hintStyle: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.w200,
+                            color: Colors.grey),
                         labelStyle: TextStyle(
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold,
@@ -98,10 +110,15 @@ class _SignupState extends State<Signup> {
                             borderSide: BorderSide(color: Colors.green))),
                   ),
                   SizedBox(height: 10.0),
-                  TextField( // Textfield for year of graduation
+                  TextField(
+                    // Textfield for year of graduation
                     decoration: InputDecoration(
                         labelText: 'Year ',
                         hintText: "EX: 2025",
+                        hintStyle: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.w200,
+                            color: Colors.grey),
                         labelStyle: TextStyle(
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold,
@@ -109,9 +126,15 @@ class _SignupState extends State<Signup> {
                         focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(color: Colors.green))),
                   ),
-                  TextField( // Text field for gender
+                  TextField(
+                    // Text field for gender
                     decoration: InputDecoration(
                         labelText: 'Gender (optional) ',
+                        hintText: 'Ex: Female',
+                        hintStyle: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.w200,
+                            color: Colors.grey),
                         labelStyle: TextStyle(
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold,
@@ -121,7 +144,8 @@ class _SignupState extends State<Signup> {
                   ),
                   SizedBox(height: 10.0),
                   SizedBox(height: 30.0),
-                  Container( // Container that is responsible for the Sign up and go back button
+                  Container(
+                      // Container that is responsible for the Sign up and go back button
                       height: 40.0,
                       child: Material(
                         borderRadius: BorderRadius.circular(20.0),
@@ -157,16 +181,12 @@ class _SignupState extends State<Signup> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: 
-                        
-                            Center(
-                              child: Text('Go Back',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'Montserrat')),
-                            ),
-                        
-                        
+                        child: Center(
+                          child: Text('Go Back',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Montserrat')),
+                        ),
                       ),
                     ),
                   ),
