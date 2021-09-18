@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meal_buddies/Screens/Welcome/log_in.dart';
-
+import 'package:meal_buddies/Screens/Profile/profile.dart';
 import 'Screens/Welcome/sign_up.dart';
 
 /*
