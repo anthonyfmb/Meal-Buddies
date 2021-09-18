@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-import 'package:meal_buddies/Screens/Welcome/forgot_password.dart';
-=======
 import 'package:meal_buddies/Screens/Welcome/MatchingPage/matching.dart';
+import 'package:meal_buddies/Screens/Welcome/forgot_password.dart';
 
 /*
 Author: David, Anthony
@@ -10,7 +8,6 @@ Date: 9/18/2021
 This class is responsible for loggin in.
 
 */
->>>>>>> 9c86aec14b258413b10d108501e88b3a35ec11d3
 
 class Login extends StatefulWidget {
   @override
@@ -98,19 +95,6 @@ class _LoginState extends State<Login> {
                           fontFamily: 'Montserrat',
                           decoration: TextDecoration.underline),
                     ),
-<<<<<<< HEAD
-                    SizedBox(height: 5.0),
-                    Container(
-                      alignment: Alignment(1.0, 0.0),
-                      padding: EdgeInsets.only(top: 15.0, left: 20.0),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => ForgotPassword()),
-                          );
-                        },
-=======
                   ),
                 ),
                 SizedBox(height: 40.0),
@@ -130,7 +114,6 @@ class _LoginState extends State<Login> {
                         );
                       },
                       child: Center(
->>>>>>> 9c86aec14b258413b10d108501e88b3a35ec11d3
                         child: Text(
                           'LOGIN',
                           style: TextStyle(
