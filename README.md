@@ -12,4 +12,6 @@ flutter run
 
 Also, when you push
 
-Make sure to Flutter Clean
+Make sure to 
+
+flutter Clean
