@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:meal_buddies/Screens/Welcome/forgot_password.dart';
 
-class Login extends StatefulWidget {
+class ForgotPassword extends StatefulWidget {
   @override
-  _LoginState createState() => new _LoginState();
+  _ForgotPasswordState createState() => new _ForgotPasswordState();
 }
 
-class _LoginState extends State<Login> {
+class _ForgotPasswordState extends State<ForgotPassword> {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
         //resizeToAvoidBottomPadding: false,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -19,24 +18,10 @@ class _LoginState extends State<Login> {
                 children: <Widget>[
                   Container(
                     padding: EdgeInsets.fromLTRB(15.0, 110.0, 0.0, 0.0),
-                    child: Text('Hello',
+                    child: Text('Forgot Password?',
                         style: TextStyle(
                             fontSize: 80.0, fontWeight: FontWeight.bold)),
                   ),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(16.0, 175.0, 0.0, 0.0),
-                    child: Text('There',
-                        style: TextStyle(
-                            fontSize: 80.0, fontWeight: FontWeight.bold)),
-                  ),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(220.0, 175.0, 0.0, 0.0),
-                    child: Text('.',
-                        style: TextStyle(
-                            fontSize: 80.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.green)),
-                  )
                 ],
               ),
             ),
@@ -54,39 +39,6 @@ class _LoginState extends State<Login> {
                           focusedBorder: UnderlineInputBorder(
                               borderSide: BorderSide(color: Colors.green))),
                     ),
-                    SizedBox(height: 20.0),
-                    TextField(
-                      decoration: InputDecoration(
-                          labelText: 'PASSWORD',
-                          labelStyle: TextStyle(
-                              fontFamily: 'Montserrat',
-                              fontWeight: FontWeight.bold,
-                              color: Colors.grey),
-                          focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.green))),
-                      obscureText: true,
-                    ),
-                    SizedBox(height: 5.0),
-                    Container(
-                      alignment: Alignment(1.0, 0.0),
-                      padding: EdgeInsets.only(top: 15.0, left: 20.0),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => ForgotPassword()),
-                          );
-                        },
-                        child: Text(
-                          'Forgot Password',
-                          style: TextStyle(
-                              color: Colors.green,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'Montserrat',
-                              decoration: TextDecoration.underline),
-                        ),
-                      ),
-                    ),
                     SizedBox(height: 40.0),
                     Container(
                       height: 40.0,
@@ -99,7 +51,7 @@ class _LoginState extends State<Login> {
                           onTap: () {},
                           child: Center(
                             child: Text(
-                              'LOGIN',
+                              'SUBMIT',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
