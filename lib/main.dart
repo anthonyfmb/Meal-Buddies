@@ -6,6 +6,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 import 'Screens/Welcome/sign_up.dart';
 
+<<<<<<< HEAD
 void main() {
 
   runApp(MyApp());
@@ -13,6 +14,15 @@ void main() {
 
 
 
+=======
+/*
+Author: David, Anthony
+Date: 9/18/2021
+This class is responsible for being the main method of the whole project.
+
+*/
+void main() => runApp(MyApp());
+>>>>>>> 6d6e62d51c478b51c2fed9b02bb04d612696df9e
 
 class MyApp extends StatelessWidget {
   @override

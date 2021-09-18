@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
+/*
+Author: Anthony, David
+Date: 9/18/2021
+This class is responsible for Sign Up.
+
+*/
+
 class Signup extends StatefulWidget {
   @override
   _SignupState createState() => _SignupState();
@@ -9,13 +16,12 @@ class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        //resizeToAvoidBottomPadding: false,
         body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: <
             Widget>[
           Container(
             child: Stack(
               children: <Widget>[
-                Container(
+                Container( // This container is responsible for Sign Up text
                   padding: EdgeInsets.fromLTRB(15.0, 110.0, 0.0, 0.0),
                   child: Text(
                     'Signup',
@@ -23,7 +29,7 @@ class _SignupState extends State<Signup> {
                         TextStyle(fontSize: 80.0, fontWeight: FontWeight.bold),
                   ),
                 ),
-                Container(
+                Container( // This container is responsible for the period at the end of Sign Up Text
                   padding: EdgeInsets.fromLTRB(260.0, 125.0, 0.0, 0.0),
                   child: Text(
                     '.',
@@ -36,13 +42,14 @@ class _SignupState extends State<Signup> {
               ],
             ),
           ),
-          Container(
+          Container( // Responsible for Text Inputs 
               padding: EdgeInsets.only(top: 35.0, left: 20.0, right: 20.0),
               child: Column(
                 children: <Widget>[
-                  TextField(
+                  TextField( // Textfield for email
                     decoration: InputDecoration(
                         labelText: 'EMAIL',
+                        hintText: "Ex: JHSmith@purdue.edu",
                         labelStyle: TextStyle(
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold,
@@ -53,9 +60,10 @@ class _SignupState extends State<Signup> {
                             borderSide: BorderSide(color: Colors.green))),
                   ),
                   SizedBox(height: 10.0),
-                  TextField(
+                  TextField( // Textfield for Password
                     decoration: InputDecoration(
                         labelText: 'PASSWORD ',
+                        hintText: "Ex: #password123 ",
                         labelStyle: TextStyle(
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold,
@@ -65,9 +73,10 @@ class _SignupState extends State<Signup> {
                     obscureText: true,
                   ),
                   SizedBox(height: 10.0),
-                  TextField(
+                  TextField( // Textfeild for Name
                     decoration: InputDecoration(
-                        labelText: 'NICK NAME ',
+                        labelText: 'NAME ',
+                        hintText: "Ex: John Smith",
                         labelStyle: TextStyle(
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold,
@@ -75,8 +84,43 @@ class _SignupState extends State<Signup> {
                         focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(color: Colors.green))),
                   ),
-                  SizedBox(height: 50.0),
-                  Container(
+                  SizedBox(height: 10.0),
+                  TextField( // Text field for major
+                    decoration: InputDecoration(
+                        labelText: 'Major ',
+                        hintText: "Ex: Computer Science",
+                        labelStyle: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey),
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.green))),
+                  ),
+                  SizedBox(height: 10.0),
+                  TextField( // Textfield for year of graduation
+                    decoration: InputDecoration(
+                        labelText: 'Year ',
+                        hintText: "EX: 2025",
+                        labelStyle: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey),
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.green))),
+                  ),
+                  TextField( // Text field for gender
+                    decoration: InputDecoration(
+                        labelText: 'Gender (optional) ',
+                        labelStyle: TextStyle(
+                            fontFamily: 'Montserrat',
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey),
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.green))),
+                  ),
+                  SizedBox(height: 10.0),
+                  SizedBox(height: 30.0),
+                  Container( // Container that is responsible for the Sign up and go back button
                       height: 40.0,
                       child: Material(
                         borderRadius: BorderRadius.circular(20.0),
