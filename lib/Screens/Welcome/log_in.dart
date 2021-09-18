@@ -21,7 +21,8 @@ class _LoginState extends State<Login> {
         body: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Container(  // This container is responsible for Hello There
+        Container(
+          // This container is responsible for Hello There
           child: Stack(
             children: <Widget>[
               Container(
@@ -47,7 +48,8 @@ class _LoginState extends State<Login> {
             ],
           ),
         ),
-        Container(  // This container is responsible for Email, Password TextBox and design 
+        Container(
+            // This container is responsible for Email, Password TextBox and design
             padding: EdgeInsets.only(top: 35.0, left: 20.0, right: 20.0),
             child: Column(
               children: <Widget>[
@@ -78,6 +80,12 @@ class _LoginState extends State<Login> {
                   alignment: Alignment(1.0, 0.0),
                   padding: EdgeInsets.only(top: 15.0, left: 20.0),
                   child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => ForgotPassword()),
+                      );
+                    },
                     child: Text(
                       'Forgot Password',
                       style: TextStyle(
@@ -120,7 +128,8 @@ class _LoginState extends State<Login> {
               ],
             )),
         SizedBox(height: 15.0),
-        Row( // This Row is responsible for register button, and asking a question if they are new
+        Row(
+          // This Row is responsible for register button, and asking a question if they are new
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(

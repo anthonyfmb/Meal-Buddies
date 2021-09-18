@@ -49,6 +49,7 @@ class _SignupState extends State<Signup> {
                   TextField( // Textfield for email
                     decoration: InputDecoration(
                         labelText: 'EMAIL',
+                        hintText: "Ex: JHSmith@purdue.edu",
                         labelStyle: TextStyle(
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold,
@@ -62,6 +63,7 @@ class _SignupState extends State<Signup> {
                   TextField( // Textfield for Password
                     decoration: InputDecoration(
                         labelText: 'PASSWORD ',
+                        hintText: "Ex: #password123 ",
                         labelStyle: TextStyle(
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold,
@@ -74,6 +76,7 @@ class _SignupState extends State<Signup> {
                   TextField( // Textfeild for Name
                     decoration: InputDecoration(
                         labelText: 'NAME ',
+                        hintText: "Ex: John Smith",
                         labelStyle: TextStyle(
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold,
@@ -85,6 +88,7 @@ class _SignupState extends State<Signup> {
                   TextField( // Text field for major
                     decoration: InputDecoration(
                         labelText: 'Major ',
+                        hintText: "Ex: Computer Science",
                         labelStyle: TextStyle(
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold,
@@ -96,6 +100,7 @@ class _SignupState extends State<Signup> {
                   TextField( // Textfield for year of graduation
                     decoration: InputDecoration(
                         labelText: 'Year ',
+                        hintText: "EX: 2025",
                         labelStyle: TextStyle(
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold,
