@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "378564729783",
+    "project_id": "mealbuddies-b05e0",
+    "storage_bucket": "mealbuddies-b05e0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:378564729783:android:a7e7e5a3173a1770126632",
+        "android_client_info": {
+          "package_name": "com.helloworld.meal_buddies"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "378564729783-1lho7m8g2gt61l1usb68bk3fufl6hb16.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdfzGyDfgBXIvheA1zuHW_uWJhIvmD9wU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "378564729783-1lho7m8g2gt61l1usb68bk3fufl6hb16.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
