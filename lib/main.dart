@@ -29,6 +29,9 @@ class MyApp extends StatelessWidget {
         '/signup': (BuildContext context) => Signup()
       },
       home: Login(),
+      theme: ThemeData(
+        primaryColor: Colors.green,
+      ),
     );
   }
 }
