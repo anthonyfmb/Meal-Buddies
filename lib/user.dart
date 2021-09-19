@@ -1,3 +1,5 @@
+import 'package:mongo_dart/mongo_dart.dart';
+
 class User {
   final String imagePath;
   final String name;
@@ -6,6 +8,7 @@ class User {
   final String about;
   final String interests;
   // add major and other things
+
   const User({
     required this.imagePath,
     required this.name,

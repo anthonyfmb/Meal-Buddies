@@ -64,7 +64,7 @@ class _MyAppState extends State<MyApp> {
       routes: <String, WidgetBuilder>{
         '/signup': (BuildContext context) => Signup()
       },
-      home: Login(),
+      home: Profile(),
       theme: ThemeData(
         primaryColor: Colors.green,
       ),
