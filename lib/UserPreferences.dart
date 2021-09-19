@@ -3,11 +3,11 @@ import 'package:meal_buddies/user.dart';
 class UserPreferences {
   static const myUser = User(
     imagePath:
-      'https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE5NDg0MDU1MzEwMjA2NDc5/russian-president-medvedev-visits-syria.jpg',
-    name: 'Bashar al-Assad',
+      'https://i.imgflip.com/g6nfz.jpg',
+    name: 'Bernard Baynard Barnaby Bartholomew Baxter Benjamin Bennerson Bentley Braxton "Bill" Barrington',
     email: 'baumanna@purdue.edu',
-    about: 'Dictator of Syria, Baathist Party Enthusiast, Sandwich Lover, Woman Lover...',
-    interests: 'Reclaiming Syria, Bringing Wrath Upon the West',
+    about: 'Tea lover, member of the local country club',
+    interests: 'Golf, Tennis, Hanging with the Chaps, Politics',
     password: 'password',
   );
 }

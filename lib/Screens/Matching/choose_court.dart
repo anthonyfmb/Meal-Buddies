@@ -6,7 +6,6 @@ import 'package:meal_buddies/Authentication/Helpers/database_methods.dart';
 import 'package:meal_buddies/Authentication/Helpers/helper_functions.dart';
 import 'package:meal_buddies/Screens/Matching/profileSearch/show_profile.dart';
 import 'package:meal_buddies/Screens/Profile/profile.dart';
-import 'package:meal_buddies/constants.dart';
 
 /*
   This class is responsible for picking place to eat
