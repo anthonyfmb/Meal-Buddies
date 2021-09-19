@@ -15,14 +15,14 @@ class ShowProfile extends StatefulWidget{
 
 class _ShowProfileState extends State<ShowProfile> {
   List<ChatUsers> chatUsers = [
-    ChatUsers(text: "Mitchell Daniela", secondaryText: "Politics, Soccer", image: "images/userImage1.jpeg", time: "Now"),
-    ChatUsers(text: "Jeff Bezos", secondaryText: "Basketball, Space", image: "images/userImage2.jpeg", time: "Now"),
-    ChatUsers(text: "Sundar Pichai", secondaryText: "Entreprenurship, Cricket ", image: "images/userImage3.jpeg", time: "Now"),
-    ChatUsers(text: "Tony Stark", secondaryText: "Movies, Science", image: "images/userImage4.jpeg", time: "Noe"),
-    ChatUsers(text: "Thomas Jefferson", secondaryText: "History, Politics", image: "images/userImage5.jpeg", time: "in 5 min"),
-    ChatUsers(text: "Tim Cook", secondaryText: "Design, Golf", image: "images/userImage6.jpeg", time: "in 3 min"),
-    ChatUsers(text: "Morgan Freeman", secondaryText: "Baseball, Reading", image: "images/userImage7.jpeg", time: "in 10 min"),
-    ChatUsers(text: "Joe Cooper", secondaryText: "Coding, Math", image: "images/userImage8.jpeg", time: "in 15 min"),
+    ChatUsers(text: "Mitch Daniels", secondaryText: "Politics, Soccer", image: "https://www.purdue.edu/president/documents/Headshot.jpg", time: "Now"),
+    ChatUsers(text: "Jeff Bezos", secondaryText: "Basketball, Space", image: "https://i.pinimg.com/originals/69/cf/88/69cf8839c8c18044a4e5c0506e12266b.jpg", time: "Now"),
+    ChatUsers(text: "Sundar Pichai", secondaryText: "Entreprenurship, Cricket ", image: "https://pbs.twimg.com/profile_images/864282616597405701/M-FEJMZ0_400x400.jpg", time: "Now"),
+    ChatUsers(text: "Tony Stark", secondaryText: "Movies, Science", image: "https://www.teahub.io/photos/full/172-1725465_tony-stark-without-beard.jpg", time: "Now"),
+    ChatUsers(text: "Thomas Jefferson", secondaryText: "History, Politics", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/02_Thomas_Jefferson_3x4.jpg/576px-02_Thomas_Jefferson_3x4.jpg", time: "in 5 min"),
+    ChatUsers(text: "Tim Cook", secondaryText: "Design, Golf", image: "https://news-media.stanford.edu/wp-content/uploads/2019/02/21104538/cook_hz.jpg", time: "in 3 min"),
+    ChatUsers(text: "Morgan Freeman", secondaryText: "Baseball, Reading", image: "https://i.pinimg.com/originals/fe/8f/59/fe8f592aad933bb5c1a2c7b3baa047e9.jpg", time: "in 15 min"),
+    ChatUsers(text: "Joe Cooper", secondaryText: "Coding, Math", image: "https://pga-tour-res.cloudinary.com/image/upload/c_fill,d_headshots_default.png,dpr_3.0,f_auto,g_face:center,h_350,q_auto,w_280/headshots_35281.png", time: "in 15 min"),
   ];
   @override
   Widget build(BuildContext context) {
@@ -44,7 +44,7 @@ class _ShowProfileState extends State<ShowProfile> {
                       height: 30,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Colors.pink[50],
+                        color: Colors.grey.shade100,
                       ),
                       child: Row(
                         

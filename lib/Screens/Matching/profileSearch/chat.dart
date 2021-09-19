@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:meal_buddies/Screens/progress.dart';
 
 // This class helps with filling out data of people in a list
 
@@ -29,7 +30,7 @@ class _ChatUsersListState extends State<ChatUsersList> {
               child: Row(
                 children: <Widget>[
                   CircleAvatar(
-                    backgroundImage: AssetImage(widget.image),
+                    backgroundImage: NetworkImage(widget.image.toString()),
                     maxRadius: 30,
                   ),
                   SizedBox(width: 16,),

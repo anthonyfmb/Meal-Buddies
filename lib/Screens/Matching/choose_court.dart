@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
         Color(0xff6DC8F3),
         Color(0xff73A1F9),
         4.2,
-        'Earhart · In The Earhart Residence Hall',
+        'Earhart',
         '',
         "https://api.hfs.purdue.edu/Menus/v2/file/2a70c68f-560b-49f7-8838-c695f92bd9bc"),
     PlaceInfo(
@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
         Color(0xffFF5B95),
         Color(0xffF8556D),
         4.1,
-        'HillenBrand · In Hillenbrand residence hall',
+        'HillenBrand',
         ' ',
         "https://api.hfs.purdue.edu/Menus/v2/file/3c068582-1710-4ef0-ab2c-ffcbdf6cc31c"),
     PlaceInfo(
@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
         Color(0xff42E695),
         Color(0xff3BB2B8),
         4.2,
-        'Winsdor · In Windsor Residence Hall',
+        'Winsdor',
         '',
         "https://api.hfs.purdue.edu/Menus/v2/file/5dc3c3df-9b7f-475a-94a6-e8f3d63bede3"),
   ];
@@ -111,7 +111,7 @@ class _HomePageState extends State<HomePage> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ShowProfile(diningCourt: items[index].name.toString())),
+                MaterialPageRoute(builder: (context) => ShowProfile(diningCourt: items[index].location.toString())),
               );
             },
             child: Center(
