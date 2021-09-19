@@ -168,8 +168,8 @@ class _HomePageState extends State<HomePage> {
                           Expanded(
                               child: Image.network(
                             items[index].imageUrl,
-                            height: 130,
-                            width: 130,
+                            height: 200,
+                            width: 200,
                           )),
                           Expanded(
                             flex: 4,
@@ -197,7 +197,7 @@ class _HomePageState extends State<HomePage> {
                                     Icon(
                                       Icons.location_on,
                                       color: Colors.white,
-                                      size: 16,
+                                      size: 20,
                                     ),
                                     SizedBox(
                                       width: 8,
