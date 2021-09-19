@@ -2,6 +2,7 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:meal_buddies/Screens/Matching/profileSearch/show_profile.dart';
+import 'package:meal_buddies/Screens/Profile/profile.dart';
 
 /*
   This class is responsible for picking place to eat
@@ -63,7 +64,12 @@ class _HomePageState extends State<HomePage> {
     return AppBar(
       leading: IconButton(
         icon: SvgPicture.asset("assets/icons/menu.svg"),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Profile()),
+          );
+        },
       ),
       // On Android by default its false
       centerTitle: true,

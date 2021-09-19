@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:meal_buddies/Screens/Matching/choose_court.dart';
 import 'package:meal_buddies/Screens/Matching/profileSearch/show_profile.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -207,7 +208,7 @@ class _SignupState extends State<Signup> {
                     ),
                     SizedBox(height: 10.0),
                     TextField(
-                      controller: _genderController,
+                      controller: _aboutController,
                       // Text field for gender
                       decoration: InputDecoration(
                           labelText: 'About ',
@@ -303,7 +304,7 @@ void _register() async { // Responsible for sign up
             });
 
             Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (context) => ShowProfile()),);
+              context, MaterialPageRoute(builder: (context) => HomePage()),);
           }
         });
       } catch (e) {

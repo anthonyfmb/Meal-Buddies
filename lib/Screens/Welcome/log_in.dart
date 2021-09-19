@@ -22,19 +22,78 @@ class _LoginState extends State<Login> {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
   _signInWithEmailAndPassword() async{
-    try{
-      final User? user = (await _firebaseAuth.signInWithEmailAndPassword(
-          email: _emailController.text.trim(), password: _passwordController.text.trim())).user;
-      if(user!=null){
-        setState(() {
-         // Fluttertoast.showToast(msg: "Signed In Sucessfully");
-          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()),);
-        });
-      }
+    try {
+      UserCredential userCredential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+          email: _emailController.text,
+          password: _passwordController.text,
+      );
 
-    }catch(e){
-     // Fluttertoast.showToast(msg: e.toString());
+      Navigator.pushReplacement<void, void>(
+        context,
+        MaterialPageRoute<void>(
+          builder: (BuildContext context) => HomePage(),
+        ),
+      );
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'user-not-found') {
+        _passwordController.clear();
+        AlertDialog inUse = AlertDialog(
+          title: Text("User not found"),
+          content: Text("Please try again."),
+          shape:
+          RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+        );
+
+        // show the dialog
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return inUse;
+          },
+        );
+        print('No user found for that email.');
+      } else if (e.code == 'wrong-password') {
+        _passwordController.clear();
+
+        AlertDialog inUse = AlertDialog(
+          title: Text("Wrong Password"),
+          content: Text("Please try again."),
+          shape:
+          RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+        );
+
+        // show the dialog
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return inUse;
+          },
+        );
+        print('Wrong password provided for that user.');
+      }
     }
+    //   final User? user = (await _firebaseAuth.signInWithEmailAndPassword(
+    //       email: _emailController.text, password: _passwordController.text)).user;
+    //
+    //   if(user!= null){
+    //       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()),);
+    //
+    //   } else {
+    //   AlertDialog inUse = AlertDialog(
+    //     title: Text("Wrong Credentials"),
+    //     content: Text("Please try again."),
+    //     shape:
+    //     RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+    //   );
+    //
+    //   // show the dialog
+    //   showDialog(
+    //     context: context,
+    //     builder: (BuildContext context) {
+    //       return inUse;
+    //     },
+    //   );
+    // }
   }
   @override
   Widget build(BuildContext context) {
@@ -132,11 +191,7 @@ class _LoginState extends State<Login> {
                       child: GestureDetector(
                         onTap: () {
                           _signInWithEmailAndPassword();
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => HomePage()),
-                          );
+
                         },
                         child: Center(
                           child: Text(
