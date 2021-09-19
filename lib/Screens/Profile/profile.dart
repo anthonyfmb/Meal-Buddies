@@ -4,6 +4,7 @@ import 'package:meal_buddies/UserPreferences.dart';
 import 'package:meal_buddies/profile_widget.dart';
 import 'package:meal_buddies/user.dart';
 import 'package:meal_buddies/Screens/Profile/edit_profile.dart';
+import 'package:meal_buddies/textfield_widget.dart';
 
 class Profile extends StatefulWidget {
   @override
@@ -84,7 +85,7 @@ class _ProfileState extends State<Profile> {
         const SizedBox(height: 16),
         Text(
             user.interests,
-            style: TextStyle(fontSize: 16, height: 1.4)
+            style: TextStyle(fontSize: 16, height: 1.4),
         ),
       ],
     ),

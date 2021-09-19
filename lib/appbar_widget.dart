@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'Screens/Matching/ui/choose_court.dart';
+import 'Screens/Matching/choose_court.dart';
 
 AppBar buildAppBar(BuildContext context) {
   final icon = CupertinoIcons.arrow_right;
