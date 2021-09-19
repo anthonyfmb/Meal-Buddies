@@ -28,6 +28,7 @@ class _SignupState extends State<Signup> {
   final TextEditingController _yearController = TextEditingController();
   final TextEditingController _interestsController = TextEditingController();
   final TextEditingController _genderController = TextEditingController();
+  final TextEditingController _aboutController = TextEditingController();
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
 
@@ -204,6 +205,24 @@ class _SignupState extends State<Signup> {
                           focusedBorder: UnderlineInputBorder(
                               borderSide: BorderSide(color: Colors.green))),
                     ),
+                    SizedBox(height: 10.0),
+                    TextField(
+                      controller: _genderController,
+                      // Text field for gender
+                      decoration: InputDecoration(
+                          labelText: 'About ',
+                          hintText: 'Ex: I like computers',
+                          hintStyle: TextStyle(
+                              fontFamily: 'Montserrat',
+                              fontWeight: FontWeight.w200,
+                              color: Colors.grey),
+                          labelStyle: TextStyle(
+                              fontFamily: 'Montserrat',
+                              fontWeight: FontWeight.bold,
+                              color: Colors.grey),
+                          focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.green))),
+                    ),
                     SizedBox(height: 30.0),
                     Container(
                         // Container that is responsible for the Sign up and go back button
@@ -278,6 +297,8 @@ void _register() async { // Responsible for sign up
               'photoUrl': "https://www.kindpng.com/picc/m/22-223965_no-profile-picture-icon-circle-member-icon-png.png",
               'major' : _majorController.text,
               'interests' : _interestsController.text,
+              'gender' : _genderController.text,
+              'about' : _aboutController.text,
 
             });
 
