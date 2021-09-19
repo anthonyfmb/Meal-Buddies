@@ -7,6 +7,8 @@ import 'package:flutter/cupertino.dart';
   This class help with app bar.
  */
 
+// Class that creates a reused appbar
+
 AppBar buildAppBar(BuildContext context) {
 
   final icon = CupertinoIcons.arrow_right;

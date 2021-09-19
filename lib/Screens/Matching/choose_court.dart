@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:meal_buddies/Screens/Matching/profileSearch/show_profile.dart';
 import 'package:meal_buddies/Screens/Profile/profile.dart';
-import 'package:meal_buddies/constants.dart';
 
 /*
   Name: David, Anthony, Eric, Rishee
