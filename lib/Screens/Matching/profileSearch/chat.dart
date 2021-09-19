@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:meal_buddies/Screens/progress.dart';
+
 
 // This class helps with filling out data of people in a list
 

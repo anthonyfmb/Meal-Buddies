@@ -22,7 +22,7 @@ class _ShowProfileState extends State<ShowProfile> {
     ChatUsers(text: "Thomas Jefferson", secondaryText: "History, Politics", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/02_Thomas_Jefferson_3x4.jpg/576px-02_Thomas_Jefferson_3x4.jpg", time: "in 5 min"),
     ChatUsers(text: "Tim Cook", secondaryText: "Design, Golf", image: "https://news-media.stanford.edu/wp-content/uploads/2019/02/21104538/cook_hz.jpg", time: "in 3 min"),
     ChatUsers(text: "Morgan Freeman", secondaryText: "Baseball, Reading", image: "https://i.pinimg.com/originals/fe/8f/59/fe8f592aad933bb5c1a2c7b3baa047e9.jpg", time: "in 15 min"),
-    ChatUsers(text: "Joe Cooper", secondaryText: "Coding, Math", image: "https://pga-tour-res.cloudinary.com/image/upload/c_fill,d_headshots_default.png,dpr_3.0,f_auto,g_face:center,h_350,q_auto,w_280/headshots_35281.png", time: "in 15 min"),
+    ChatUsers(text: "Baynard Barnaby Barrington", secondaryText: "Golf, Tennis, Hanging with the Chaps, Politics", image: "https://i.imgflip.com/g6nfz.jpg", time: "in 15 min"),
 
   ];
   @override
