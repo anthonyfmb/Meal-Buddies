@@ -5,7 +5,7 @@ import 'package:meal_buddies/Screens/Profile/profile.dart';
 //Import Firebase Authentication
 import 'package:firebase_auth/firebase_auth.dart';
 import 'Screens/Welcome/sign_up.dart';
-
+import 'Screens/Profile/edit_profile.dart';
 
 void main() {
   runApp(MyApp());

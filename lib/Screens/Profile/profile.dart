@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:meal_buddies/Screens/appbar_widget.dart';
+import 'package:meal_buddies/appbar_widget.dart';
 import 'package:meal_buddies/UserPreferences.dart';
 import 'package:meal_buddies/profile_widget.dart';
+import 'package:meal_buddies/user.dart';
+import 'package:meal_buddies/Screens/Profile/edit_profile.dart';
 
 class Profile extends StatefulWidget {
   @override
@@ -20,11 +22,71 @@ class _ProfileState extends State<Profile> {
         children: [
           ProfileWidget(
             imagePath: user.imagePath,
-            onClicked: () async {},
-          )
+            onClicked: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => EditProfile()),
+              );
+            },
+          ),
+          const SizedBox(height: 24),
+          buildName(user),
+          const SizedBox(height: 24),
+          buildAbout(user),
+          const SizedBox(height: 24),
+          buildInterests(user),
         ],
       ),
     );
 
   }
+
+  Widget buildName(User user) => Column(
+    children: [
+      Text(
+        user.name,
+        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+      ),
+      const SizedBox(height: 4),
+      Text(
+        user.email,
+        style: TextStyle(color: Colors.grey),
+      )
+    ],
+  );
+
+  Widget buildAbout(User user) => Container(
+    padding: EdgeInsets.symmetric(horizontal: 48),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'About',
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        ),
+        const SizedBox(height: 16),
+        Text(
+          user.about,
+          style: TextStyle(fontSize: 16, height: 1.4)
+        ),
+      ],
+    ),
+  );
+
+  Widget buildInterests(User user) => Container(
+    padding: EdgeInsets.symmetric(horizontal: 48),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Interests',
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        ),
+        const SizedBox(height: 16),
+        Text(
+            user.interests,
+            style: TextStyle(fontSize: 16, height: 1.4)
+        ),
+      ],
+    ),
+  );
 }
