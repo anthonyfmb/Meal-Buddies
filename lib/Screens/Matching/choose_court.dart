@@ -1,8 +1,12 @@
 import 'dart:ui' as ui;
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:meal_buddies/Authentication/Helpers/database_methods.dart';
+import 'package:meal_buddies/Authentication/Helpers/helper_functions.dart';
 import 'package:meal_buddies/Screens/Matching/profileSearch/show_profile.dart';
 import 'package:meal_buddies/Screens/Profile/profile.dart';
+import 'package:meal_buddies/constants.dart';
 
 /*
   This class is responsible for picking place to eat
@@ -16,9 +20,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final double _borderRadius = 24;
 
-  var items = [
+  var items = [ // Hard coded data of Dining COurts
     PlaceInfo(
-        'Earhart Dining Court',
+        '      Earhart Dining Court',
         Color(0xff6DC8F3),
         Color(0xff73A1F9),
         4.4,
@@ -26,7 +30,7 @@ class _HomePageState extends State<HomePage> {
         '',
         "https://api.hfs.purdue.edu/Menus/v2/file/2a70c68f-560b-49f7-8838-c695f92bd9bc"),
     PlaceInfo(
-        'Ford Dining Court',
+        '      Ford Dining Court',
         Color(0xffFFB157),
         Color(0xffFFA057),
         3.7,
@@ -34,7 +38,7 @@ class _HomePageState extends State<HomePage> {
         '',
         "https://api.hfs.purdue.edu/Menus/v2/file/b8b7e146-37e3-4a4a-a0de-46d189fe1f87"),
     PlaceInfo(
-        'Hillenbrand Dining Court',
+        '      Hillenbrand Dining Court',
         Color(0xffFF5B95),
         Color(0xffF8556D),
         4.5,
@@ -42,7 +46,7 @@ class _HomePageState extends State<HomePage> {
         ' ',
         "https://api.hfs.purdue.edu/Menus/v2/file/3c068582-1710-4ef0-ab2c-ffcbdf6cc31c"),
     PlaceInfo(
-        'Wiley Dining Court',
+        '      Wiley Dining Court',
         Color(0xffD76EF5),
         Color(0xff8F7AFE),
         4.1,
@@ -50,7 +54,7 @@ class _HomePageState extends State<HomePage> {
         '',
         "https://api.hfs.purdue.edu/Menus/v2/file/36dd94f8-ce14-490c-bd19-6059c374a92a"),
     PlaceInfo(
-        'Winsdor Dining Court',
+        '      Winsdor Dining Court',
         Color(0xff42E695),
         Color(0xff3BB2B8),
         4.2,
@@ -59,11 +63,13 @@ class _HomePageState extends State<HomePage> {
         "https://api.hfs.purdue.edu/Menus/v2/file/5dc3c3df-9b7f-475a-94a6-e8f3d63bede3"),
   ];
 
+  final icon = CupertinoIcons.arrow_right;
   AppBar buildAppBar() {
     // App bar
     return AppBar(
+
       leading: IconButton(
-        icon: SvgPicture.asset("assets/icons/menu.svg"),
+        icon: Icon(icon),
         onPressed: () {
           Navigator.push(
             context,
@@ -73,18 +79,28 @@ class _HomePageState extends State<HomePage> {
       ),
       // On Android by default its false
       centerTitle: true,
-      title: Text("Meal Buddies"),
+      title: Text(Constants.name.toString()),
       actions: <Widget>[
-        IconButton(
-          icon: SvgPicture.asset("assets/icons/search.svg"),
-          onPressed: () {},
-        ),
         SizedBox(
           // It means 5 because by out defaultSize = 10
           width: 10,
         )
       ],
     );
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+  }
+
+
+  _getData() async {
+    Constants.name = await HelperFunctions.getUserNameSharedPreference();
+    Constants.myProfileImg = await HelperFunctions.getUserImageSharedPreference();
+    Constants.email = await HelperFunctions.getUserEmailSharedPreference();
   }
 
   @override
@@ -141,16 +157,10 @@ class _HomePageState extends State<HomePage> {
                       child: Row(
                         children: <Widget>[
                           Expanded(
-                              // child: Image.asset(
-                              //   items[index].imageUrl,
-                              //   height: 64,
-                              //   width: 64,
-                              // ),
-                              // flex: 2,
                               child: Image.network(
                             items[index].imageUrl,
-                            height: 90,
-                            width: 90,
+                            height: 130,
+                            width: 130,
                           )),
                           Expanded(
                             flex: 4,

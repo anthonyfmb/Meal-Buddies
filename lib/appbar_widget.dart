@@ -9,15 +9,15 @@ AppBar buildAppBar(BuildContext context) {
     leading: BackButton(),
     backgroundColor: Colors.blue,
     elevation: 0,
-    actions: [
-      IconButton(
-        icon: Icon(icon),
-        onPressed: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => HomePage()),
-          );
-        },
-      )
-    ]
+    // actions: [
+    //   IconButton(
+    //     icon: Icon(icon),
+    //     onPressed: () {
+    //       Navigator.of(context).push(
+    //         MaterialPageRoute(builder: (context) => HomePage()),
+    //       );
+    //     },
+    //   )
+    // ]
   );
 }

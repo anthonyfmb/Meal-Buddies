@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:meal_buddies/Authentication/Helpers/helper_functions.dart';
 import 'package:meal_buddies/Screens/Matching/choose_court.dart';
 import 'package:meal_buddies/Screens/Matching/profileSearch/show_profile.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -279,6 +280,9 @@ class _SignupState extends State<Signup> {
         ));
   }
 
+
+
+
 void _register() async { // Responsible for sign up
     String email = _emailController.text.trim();
     String password = _passwordController.text.trim();
@@ -290,7 +294,7 @@ void _register() async { // Responsible for sign up
           if (user != null) {
             CollectionReference users = FirebaseFirestore.instance.collection('users');
 
-            users.add({
+            users.add({ // adds the user through fields
               'id': users.id,
               'firstName': _firstNameController.text,
               'lastName': _lastNameController.text,
@@ -302,6 +306,20 @@ void _register() async { // Responsible for sign up
               'about' : _aboutController.text,
 
             });
+
+            HelperFunctions.saveUserLoggedInSharedPreference(true);
+            HelperFunctions.saveUserNameSharedPreference(_firstNameController.text
+                .replaceAll(new RegExp(r"\s+\b|\b\s"), "") +
+                ' ' +
+                _lastNameController.text
+                    .replaceAll(new RegExp(r"\s+\b|\b\s"), ""));
+            HelperFunctions.saveUserEmailSharedPreference(
+                _emailController.text);
+            HelperFunctions.saveUserIDSharedPreference(
+                users.id);
+            HelperFunctions.saveUserProfileImagePreference(
+                "https://www.kindpng.com/picc/m/22-223965_no-profile-picture-icon-circle-member-icon-png.png");
+
 
             Navigator.pushReplacement(
               context, MaterialPageRoute(builder: (context) => HomePage()),);
