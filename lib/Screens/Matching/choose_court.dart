@@ -67,20 +67,20 @@ class _HomePageState extends State<HomePage> {
   AppBar buildAppBar() {
     // App bar
     return AppBar(
-
-      leading: IconButton(
-        icon: Icon(icon),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => Profile()),
-          );
-        },
-      ),
+      
       // On Android by default its false
       centerTitle: true,
       title: Text(Constants.name.toString()),
       actions: <Widget>[
+        IconButton(
+          icon: Icon(icon),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Profile()),
+            );
+          },
+        ),
         SizedBox(
           // It means 5 because by out defaultSize = 10
           width: 10,
