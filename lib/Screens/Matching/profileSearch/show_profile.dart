@@ -15,14 +15,14 @@ class ShowProfile extends StatefulWidget{
 
 class _ShowProfileState extends State<ShowProfile> {
   List<ChatUsers> chatUsers = [
-    ChatUsers(text: "Jane Russel", secondaryText: "Awesome Setup", image: "images/userImage1.jpeg", time: "Now"),
-    ChatUsers(text: "Glady's Murphy", secondaryText: "That's Great", image: "images/userImage2.jpeg", time: "Yesterday"),
-    ChatUsers(text: "Jorge Henry", secondaryText: "Hey where are you?", image: "images/userImage3.jpeg", time: "31 Mar"),
-    ChatUsers(text: "Philip Fox", secondaryText: "Busy! Call me in 20 mins", image: "images/userImage4.jpeg", time: "28 Mar"),
-    ChatUsers(text: "Debra Hawkins", secondaryText: "Thankyou, It's awesome", image: "images/userImage5.jpeg", time: "23 Mar"),
-    ChatUsers(text: "Jacob Pena", secondaryText: "will update you in evening", image: "images/userImage6.jpeg", time: "17 Mar"),
-    ChatUsers(text: "Andrey Jones", secondaryText: "Can you please share the file?", image: "images/userImage7.jpeg", time: "24 Feb"),
-    ChatUsers(text: "John Wick", secondaryText: "How are you?", image: "images/userImage8.jpeg", time: "18 Feb"),
+    ChatUsers(text: "Mitchell Daniela", secondaryText: "Politics, Soccer", image: "images/userImage1.jpeg", time: "Now"),
+    ChatUsers(text: "Jeff Bezos", secondaryText: "Basketball, Space", image: "images/userImage2.jpeg", time: "Now"),
+    ChatUsers(text: "Sundar Pichai", secondaryText: "Entreprenurship, Cricket ", image: "images/userImage3.jpeg", time: "Now"),
+    ChatUsers(text: "Tony Stark", secondaryText: "Movies, Science", image: "images/userImage4.jpeg", time: "Noe"),
+    ChatUsers(text: "Thomas Jefferson", secondaryText: "History, Politics", image: "images/userImage5.jpeg", time: "in 5 min"),
+    ChatUsers(text: "Tim Cook", secondaryText: "Design, Golf", image: "images/userImage6.jpeg", time: "in 3 min"),
+    ChatUsers(text: "Morgan Freeman", secondaryText: "Baseball, Reading", image: "images/userImage7.jpeg", time: "in 10 min"),
+    ChatUsers(text: "Joe Cooper", secondaryText: "Coding, Math", image: "images/userImage8.jpeg", time: "in 15 min"),
   ];
   @override
   Widget build(BuildContext context) {
