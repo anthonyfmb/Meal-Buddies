@@ -1,16 +1,15 @@
 import 'dart:ui' as ui;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:meal_buddies/Authentication/Helpers/database_methods.dart';
-import 'package:meal_buddies/Authentication/Helpers/helper_functions.dart';
 import 'package:meal_buddies/Screens/Matching/profileSearch/show_profile.dart';
 import 'package:meal_buddies/Screens/Profile/profile.dart';
 import 'package:meal_buddies/constants.dart';
 
 /*
-  This class is responsible for picking place to eat
-*/
+  Name: David, Anthony, Eric, Rishee
+  Date: 9/19/2021
+  This class help with choosing which dining court
+ */
 
 class HomePage extends StatefulWidget {
   @override
@@ -65,19 +64,7 @@ class _HomePageState extends State<HomePage> {
 
   final icon = CupertinoIcons.arrow_right;
   AppBar buildAppBar() {
-    // App bar
     return AppBar(
-
-      // leading: IconButton(
-      //   icon: Icon(icon),
-      //   onPressed: () {
-      //     Navigator.push(
-      //       context,
-      //       MaterialPageRoute(builder: (context) => Profile()),
-      //     );
-      //   },
-      // ),
-      // On Android by default its false
       centerTitle: true,
       title: Text(Constants.name.toString()),
       actions: <Widget>[
@@ -91,7 +78,6 @@ class _HomePageState extends State<HomePage> {
             },
         ),
         SizedBox(
-          // It means 5 because by out defaultSize = 10
           width: 10,
         )
       ],
@@ -106,15 +92,8 @@ class _HomePageState extends State<HomePage> {
   }
 
 
-  // _getData() async {
-  //   Constants.name = await HelperFunctions.getUserNameSharedPreference();
-  //   Constants.myProfileImg = await HelperFunctions.getUserImageSharedPreference();
-  //   Constants.email = await HelperFunctions.getUserEmailSharedPreference();
-  // }
-
   @override
   Widget build(BuildContext context) {
-    // responsible for body of the design
     return Scaffold(
       appBar: buildAppBar(),
       body: ListView.builder(
