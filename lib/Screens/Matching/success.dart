@@ -21,16 +21,17 @@ class _SuccessState extends State<Success> {
       appBar: buildAppBar(context),
       body: ListView(
         children: [
-          const SizedBox(height: 4),
+          const SizedBox(height: 100),
           Text(
             'Success!',
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
+          const SizedBox(height: 40),
           Text(
-            'You have matched!',
+            'You have matched with Mitch Daniels!',
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 14, color: Colors.grey),
+            style: TextStyle(fontSize: 18, color: Colors.black),
 
           ),
         ],
