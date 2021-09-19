@@ -13,7 +13,7 @@ class Profile extends StatefulWidget {
 
 class _ProfileState extends State<Profile> {
 
-  String _email = HelperFunction.get
+  
   @override
   void initState() {
     // TODO: implement initState
