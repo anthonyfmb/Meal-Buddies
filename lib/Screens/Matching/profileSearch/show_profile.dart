@@ -1,8 +1,8 @@
 
-import 'package:meal_buddies/Screens/Matching/profileSearch/chat_users.dart';
+import 'package:meal_buddies/Screens/Matching/profileSearch/profile_users.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:meal_buddies/Screens/Matching/profileSearch/chat.dart';
+import 'package:meal_buddies/Screens/Matching/profileSearch/profile_list.dart';
 
 // This page shows profile
 class ShowProfile extends StatefulWidget{
@@ -14,15 +14,15 @@ class ShowProfile extends StatefulWidget{
 }
 
 class _ShowProfileState extends State<ShowProfile> {
-  List<ChatUsers> chatUsers = [
-    ChatUsers(text: "Mitch Daniels", secondaryText: "Politics, Soccer", image: "https://www.purdue.edu/president/documents/Headshot.jpg", time: "Now"),
-    ChatUsers(text: "Jeff Bezos", secondaryText: "Basketball, Space", image: "https://i.pinimg.com/originals/69/cf/88/69cf8839c8c18044a4e5c0506e12266b.jpg", time: "Now"),
-    ChatUsers(text: "Sundar Pichai", secondaryText: "Entreprenurship, Cricket ", image: "https://pbs.twimg.com/profile_images/864282616597405701/M-FEJMZ0_400x400.jpg", time: "Now"),
-    ChatUsers(text: "Tony Stark", secondaryText: "Movies, Science", image: "https://www.teahub.io/photos/full/172-1725465_tony-stark-without-beard.jpg", time: "Now"),
-    ChatUsers(text: "Thomas Jefferson", secondaryText: "History, Politics", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/02_Thomas_Jefferson_3x4.jpg/576px-02_Thomas_Jefferson_3x4.jpg", time: "in 5 min"),
-    ChatUsers(text: "Tim Cook", secondaryText: "Design, Golf", image: "https://news-media.stanford.edu/wp-content/uploads/2019/02/21104538/cook_hz.jpg", time: "in 3 min"),
-    ChatUsers(text: "Morgan Freeman", secondaryText: "Baseball, Reading", image: "https://i.pinimg.com/originals/fe/8f/59/fe8f592aad933bb5c1a2c7b3baa047e9.jpg", time: "in 15 min"),
-    ChatUsers(text: "Baynard Barnaby Barrington", secondaryText: "Golf, Tennis, Hanging with the Chaps, Politics", image: "https://i.imgflip.com/g6nfz.jpg", time: "in 15 min"),
+  List<ProfileUsers> chatUsers = [
+    ProfileUsers(text: "Mitch Daniels", secondaryText: "Politics, Soccer", image: "https://www.purdue.edu/president/documents/Headshot.jpg", time: "Now"),
+    ProfileUsers(text: "Jeff Bezos", secondaryText: "Basketball, Space", image: "https://i.pinimg.com/originals/69/cf/88/69cf8839c8c18044a4e5c0506e12266b.jpg", time: "Now"),
+    ProfileUsers(text: "Sundar Pichai", secondaryText: "Entreprenurship, Cricket ", image: "https://pbs.twimg.com/profile_images/864282616597405701/M-FEJMZ0_400x400.jpg", time: "Now"),
+    ProfileUsers(text: "Tony Stark", secondaryText: "Movies, Science", image: "https://www.teahub.io/photos/full/172-1725465_tony-stark-without-beard.jpg", time: "Now"),
+    ProfileUsers(text: "Thomas Jefferson", secondaryText: "History, Politics", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/02_Thomas_Jefferson_3x4.jpg/576px-02_Thomas_Jefferson_3x4.jpg", time: "in 5 min"),
+    ProfileUsers(text: "Tim Cook", secondaryText: "Design, Golf", image: "https://news-media.stanford.edu/wp-content/uploads/2019/02/21104538/cook_hz.jpg", time: "in 3 min"),
+    ProfileUsers(text: "Morgan Freeman", secondaryText: "Baseball, Reading", image: "https://i.pinimg.com/originals/fe/8f/59/fe8f592aad933bb5c1a2c7b3baa047e9.jpg", time: "in 15 min"),
+    ProfileUsers(text: "Baynard Barnaby Barrington", secondaryText: "Golf, Tennis, Hanging with the Chaps, Politics", image: "https://i.imgflip.com/g6nfz.jpg", time: "in 15 min"),
 
   ];
   @override
@@ -48,7 +48,7 @@ class _ShowProfileState extends State<ShowProfile> {
                         color: Colors.grey.shade100,
                       ),
                       child: Row(
-                        
+
                       ),
                     )
                   ],
