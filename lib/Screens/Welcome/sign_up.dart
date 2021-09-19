@@ -226,18 +226,18 @@ class _SignupState extends State<Signup> {
                               borderSide: BorderSide(color: Colors.green))),
                     ),
                     SizedBox(height: 30.0),
-                    Container(
-                        // Container that is responsible for the Sign up and go back button
-                        height: 40.0,
-                        child: Material(
-                          borderRadius: BorderRadius.circular(20.0),
-                          shadowColor: Colors.greenAccent,
-                          color: Colors.green,
-                          elevation: 7.0,
-                          child: GestureDetector(
-                            onTap: () {
-                              _register();
-                            },
+                    GestureDetector(
+                      onTap: () {
+                        _register();
+                      },
+                      child: Container(
+                          // Container that is responsible for the Sign up and go back button
+                          height: 40.0,
+                          child: Material(
+                            borderRadius: BorderRadius.circular(20.0),
+                            shadowColor: Colors.greenAccent,
+                            color: Colors.green,
+                            elevation: 7.0,
                             child: Center(
                               child: Text(
                                 'SIGNUP',
@@ -247,8 +247,8 @@ class _SignupState extends State<Signup> {
                                     fontFamily: 'Montserrat'),
                               ),
                             ),
-                          ),
-                        )),
+                          )),
+                    ),
                     SizedBox(height: 20.0),
                     Container(
                       height: 40.0,
@@ -307,18 +307,6 @@ void _register() async { // Responsible for sign up
 
             });
 
-            HelperFunctions.saveUserLoggedInSharedPreference(true);
-            HelperFunctions.saveUserNameSharedPreference(_firstNameController.text
-                .replaceAll(new RegExp(r"\s+\b|\b\s"), "") +
-                ' ' +
-                _lastNameController.text
-                    .replaceAll(new RegExp(r"\s+\b|\b\s"), ""));
-            HelperFunctions.saveUserEmailSharedPreference(
-                _emailController.text);
-            HelperFunctions.saveUserIDSharedPreference(
-                users.id);
-            HelperFunctions.saveUserProfileImagePreference(
-                "https://www.kindpng.com/picc/m/22-223965_no-profile-picture-icon-circle-member-icon-png.png");
 
 
             Navigator.pushReplacement(

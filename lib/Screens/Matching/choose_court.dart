@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
         '      Earhart Dining Court',
         Color(0xff6DC8F3),
         Color(0xff73A1F9),
-        4.4,
+        4.2,
         'Earhart · In The Earhart Residence Hall',
         '',
         "https://api.hfs.purdue.edu/Menus/v2/file/2a70c68f-560b-49f7-8838-c695f92bd9bc"),
@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
         '      Ford Dining Court',
         Color(0xffFFB157),
         Color(0xffFFA057),
-        3.7,
+        3.8,
         'Ford',
         '',
         "https://api.hfs.purdue.edu/Menus/v2/file/b8b7e146-37e3-4a4a-a0de-46d189fe1f87"),
@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
         '      Hillenbrand Dining Court',
         Color(0xffFF5B95),
         Color(0xffF8556D),
-        4.5,
+        4.1,
         'HillenBrand · In Hillenbrand residence hall',
         ' ',
         "https://api.hfs.purdue.edu/Menus/v2/file/3c068582-1710-4ef0-ab2c-ffcbdf6cc31c"),
@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
         '      Wiley Dining Court',
         Color(0xffD76EF5),
         Color(0xff8F7AFE),
-        4.1,
+        4.7,
         'Wiley',
         '',
         "https://api.hfs.purdue.edu/Menus/v2/file/36dd94f8-ce14-490c-bd19-6059c374a92a"),
@@ -97,11 +97,7 @@ class _HomePageState extends State<HomePage> {
   }
 
 
-  _getData() async {
-    Constants.name = await HelperFunctions.getUserNameSharedPreference();
-    Constants.myProfileImg = await HelperFunctions.getUserImageSharedPreference();
-    Constants.email = await HelperFunctions.getUserEmailSharedPreference();
-  }
+
 
   @override
   Widget build(BuildContext context) {

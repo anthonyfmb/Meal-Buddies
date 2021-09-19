@@ -35,10 +35,6 @@ class _LoginState extends State<Login> {
 
       // Saves userName, email, and Document ID
 
-      HelperFunctions.saveUserLoggedInSharedPreference(true);
-      HelperFunctions.saveUserEmailSharedPreference(_emailController.text);
-
-
 
 
       Navigator.pushReplacement<void, void>(
@@ -85,33 +81,11 @@ class _LoginState extends State<Login> {
         print('Wrong password provided for that user.');
       }
     }
-    //   final User? user = (await _firebaseAuth.signInWithEmailAndPassword(
-    //       email: _emailController.text, password: _passwordController.text)).user;
-    //
-    //   if(user!= null){
-    //       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()),);
-    //
-    //   } else {
-    //   AlertDialog inUse = AlertDialog(
-    //     title: Text("Wrong Credentials"),
-    //     content: Text("Please try again."),
-    //     shape:
-    //     RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-    //   );
-    //
-    //   // show the dialog
-    //   showDialog(
-    //     context: context,
-    //     builder: (BuildContext context) {
-    //       return inUse;
-    //     },
-    //   );
-    // }
+
   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        //resizeToAvoidBottomPadding: false,
         body: SingleChildScrollView(
           child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -194,18 +168,17 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                   SizedBox(height: 40.0),
-                  Container(
-                    height: 40.0,
-                    child: Material(
-                      borderRadius: BorderRadius.circular(20.0),
-                      shadowColor: Colors.greenAccent,
-                      color: Colors.green,
-                      elevation: 7.0,
-                      child: GestureDetector(
-                        onTap: () {
-                          _signInWithEmailAndPassword();
-
-                        },
+                  GestureDetector(
+                    onTap: () {
+                      _signInWithEmailAndPassword();
+                    },
+                    child: Container(
+                      height: 40.0,
+                      child: Material(
+                        borderRadius: BorderRadius.circular(20.0),
+                        shadowColor: Colors.greenAccent,
+                        color: Colors.green,
+                        elevation: 7.0,
                         child: Center(
                           child: Text(
                             'LOGIN',
