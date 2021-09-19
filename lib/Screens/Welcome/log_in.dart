@@ -1,4 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:meal_buddies/Authentication/Helpers/database_methods.dart';
+import 'package:meal_buddies/Authentication/Helpers/helper_functions.dart';
 import 'package:meal_buddies/Screens/Matching/choose_court.dart';
 import 'package:meal_buddies/Screens/Welcome/forgot_password.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -27,6 +30,16 @@ class _LoginState extends State<Login> {
           email: _emailController.text,
           password: _passwordController.text,
       );
+
+      QuerySnapshot userInfoSnapshot = await DatabaseMethods().getUserInfo(_emailController.text);
+
+      // Saves userName, email, and Document ID
+
+      HelperFunctions.saveUserLoggedInSharedPreference(true);
+      HelperFunctions.saveUserEmailSharedPreference(_emailController.text);
+
+
+
 
       Navigator.pushReplacement<void, void>(
         context,
