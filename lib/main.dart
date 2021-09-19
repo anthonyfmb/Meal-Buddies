@@ -53,7 +53,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    initializeFlutterFire();
+    //initializeFlutterFire();
    
   }
 //end of firebase initalization
@@ -64,7 +64,7 @@ class _MyAppState extends State<MyApp> {
       routes: <String, WidgetBuilder>{
         '/signup': (BuildContext context) => Signup()
       },
-      home: Profile(),
+      home: Login(),
       theme: ThemeData(
         primaryColor: Colors.green,
       ),
