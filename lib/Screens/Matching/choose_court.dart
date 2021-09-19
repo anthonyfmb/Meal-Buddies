@@ -65,7 +65,6 @@ class _HomePageState extends State<HomePage> {
   AppBar buildAppBar() {
     return AppBar(
       centerTitle: true,
-      title: Text(Constants.name.toString()),
       actions: <Widget>[
         IconButton(
             icon: Icon(icon),
