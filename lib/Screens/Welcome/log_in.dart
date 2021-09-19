@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meal_buddies/Screens/Matching/choose_court.dart';
 import 'package:meal_buddies/Screens/Welcome/forgot_password.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 /*
 Author: David, Anthony
@@ -15,6 +16,26 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+
+  _signInWithEmailAndPassword() async{
+    try{
+      final User? user = (await _firebaseAuth.signInWithEmailAndPassword(
+          email: _emailController.text.trim(), password: _passwordController.text.trim())).user;
+      if(user!=null){
+        setState(() {
+         // Fluttertoast.showToast(msg: "Signed In Sucessfully");
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()),);
+        });
+      }
+
+    }catch(e){
+     // Fluttertoast.showToast(msg: e.toString());
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,6 +77,7 @@ class _LoginState extends State<Login> {
               child: Column(
                 children: <Widget>[
                   TextField(
+                    controller: _emailController,
                     decoration: InputDecoration(
                         labelText: 'EMAIL',
                         labelStyle: TextStyle(
@@ -67,6 +89,7 @@ class _LoginState extends State<Login> {
                   ),
                   SizedBox(height: 20.0),
                   TextField(
+                    controller: _passwordController,
                     decoration: InputDecoration(
                         labelText: 'PASSWORD',
                         labelStyle: TextStyle(
@@ -108,6 +131,7 @@ class _LoginState extends State<Login> {
                       elevation: 7.0,
                       child: GestureDetector(
                         onTap: () {
+                          _signInWithEmailAndPassword();
                           Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -158,4 +182,6 @@ class _LoginState extends State<Login> {
     ),
         ));
   }
+
+
 }
