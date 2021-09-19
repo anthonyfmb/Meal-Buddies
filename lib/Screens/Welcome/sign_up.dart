@@ -1,8 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:meal_buddies/Authentication/Helpers/helper_functions.dart';
 import 'package:meal_buddies/Screens/Matching/choose_court.dart';
-import 'package:meal_buddies/Screens/Matching/profileSearch/show_profile.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 /*
