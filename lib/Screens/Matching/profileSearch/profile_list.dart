@@ -8,18 +8,18 @@ import 'package:flutter/material.dart';
  */
 
 
-class ChatUsersList extends StatefulWidget{
+class ProfileUsersList extends StatefulWidget{
   String text;
   String secondaryText;
   String image;
   String time;
   bool isMessageRead;
-  ChatUsersList({required this.text,required this.secondaryText,required this.image,required this.time,required this.isMessageRead});
+  ProfileUsersList({required this.text,required this.secondaryText,required this.image,required this.time,required this.isMessageRead});
   @override
-  _ChatUsersListState createState() => _ChatUsersListState();
+  _ProfileUsersListState createState() => _ProfileUsersListState();
 }
 
-class _ChatUsersListState extends State<ChatUsersList> {
+class _ProfileUsersListState extends State<ProfileUsersList> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
