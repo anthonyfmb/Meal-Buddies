@@ -49,7 +49,7 @@ class _ChatUsersListState extends State<ChatUsersList> {
                 ],
               ),
             ),
-            Text(widget.time,style: TextStyle(fontSize: 12,color: widget.isMessageRead?Colors.pink:Colors.grey.shade500),),
+            Text(widget.time,style: TextStyle(fontSize: 12,color: Colors.grey.shade500),),
           ],
         ),
       ),

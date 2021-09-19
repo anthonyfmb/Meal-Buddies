@@ -18,7 +18,7 @@ class _ShowProfileState extends State<ShowProfile> {
     ChatUsers(text: "Mitchell Daniela", secondaryText: "Politics, Soccer", image: "images/userImage1.jpeg", time: "Now"),
     ChatUsers(text: "Jeff Bezos", secondaryText: "Basketball, Space", image: "images/userImage2.jpeg", time: "Now"),
     ChatUsers(text: "Sundar Pichai", secondaryText: "Entreprenurship, Cricket ", image: "images/userImage3.jpeg", time: "Now"),
-    ChatUsers(text: "Tony Stark", secondaryText: "Movies, Science", image: "images/userImage4.jpeg", time: "Noe"),
+    ChatUsers(text: "Tony Stark", secondaryText: "Movies, Science", image: "images/userImage4.jpeg", time: "No"),
     ChatUsers(text: "Thomas Jefferson", secondaryText: "History, Politics", image: "images/userImage5.jpeg", time: "in 5 min"),
     ChatUsers(text: "Tim Cook", secondaryText: "Design, Golf", image: "images/userImage6.jpeg", time: "in 3 min"),
     ChatUsers(text: "Morgan Freeman", secondaryText: "Baseball, Reading", image: "images/userImage7.jpeg", time: "in 10 min"),
