@@ -8,8 +8,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'Screens/Welcome/sign_up.dart';
 import 'Screens/Profile/edit_profile.dart';
 
-void main() {
+
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -30,10 +32,12 @@ class _MyAppState extends State<MyApp> {
   // Set default `_initialized` and `_error` state to false
   bool _initialized = false;
   bool _error = false;
+  
   // Define an async function to initialize FlutterFire
   void initializeFlutterFire() async {
     try {
       // Wait for Firebase to initialize and set `_initialized` state to true
+      WidgetsFlutterBinding.ensureInitialized();
       await Firebase.initializeApp();
       setState(() {
         _initialized = true;
@@ -48,8 +52,9 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
-    initializeFlutterFire();
     super.initState();
+    initializeFlutterFire();
+   
   }
 //end of firebase initalization
   @override

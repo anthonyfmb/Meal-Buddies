@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:meal_buddies/Screens/Matching/profileSearch/show_profile.dart';
 
 /*
 Author: Anthony, David
@@ -14,6 +16,14 @@ class Signup extends StatefulWidget {
 }
 
 class _SignupState extends State<Signup> {
+
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _confpasswordController = TextEditingController();
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -29,7 +39,7 @@ class _SignupState extends State<Signup> {
                   child: Text(
                     'Signup',
                     style:
-                        TextStyle(fontSize: 80.0, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 60.0, fontWeight: FontWeight.bold),
                   ),
                 ),
                 Container(
@@ -38,7 +48,7 @@ class _SignupState extends State<Signup> {
                   child: Text(
                     '.',
                     style: TextStyle(
-                        fontSize: 80.0,
+                        fontSize: 60.0,
                         fontWeight: FontWeight.bold,
                         color: Colors.green),
                   ),
@@ -52,6 +62,7 @@ class _SignupState extends State<Signup> {
               child: Column(
                 children: <Widget>[
                   TextField(
+                    controller: _emailController,
                     // Textfield for email
                     decoration: InputDecoration(
                         labelText: 'EMAIL',
@@ -64,8 +75,10 @@ class _SignupState extends State<Signup> {
                   ),
                   SizedBox(height: 10.0),
                   TextField(
+                    controller: _passwordController,
                     // Textfield for Password
                     decoration: InputDecoration(
+                        
                         labelText: 'PASSWORD ',
                         labelStyle: TextStyle(
                             fontFamily: 'Montserrat',
@@ -76,73 +89,73 @@ class _SignupState extends State<Signup> {
                     obscureText: true,
                   ),
                   SizedBox(height: 10.0),
-                  TextField(
-                    // Textfeild for Name
-                    decoration: InputDecoration(
-                        labelText: 'NAME ',
-                        hintText: "Ex: John Smith",
-                        hintStyle: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.w200,
-                            color: Colors.grey),
-                        labelStyle: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey),
-                        focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.green))),
-                  ),
-                  SizedBox(height: 10.0),
-                  TextField(
-                    // Text field for major
-                    decoration: InputDecoration(
-                        labelText: 'Major ',
-                        hintText: "Ex: Computer Science",
-                        hintStyle: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.w200,
-                            color: Colors.grey),
-                        labelStyle: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey),
-                        focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.green))),
-                  ),
-                  SizedBox(height: 10.0),
-                  TextField(
-                    // Textfield for year of graduation
-                    decoration: InputDecoration(
-                        labelText: 'Year ',
-                        hintText: "EX: 2025",
-                        hintStyle: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.w200,
-                            color: Colors.grey),
-                        labelStyle: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey),
-                        focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.green))),
-                  ),
-                  TextField(
-                    // Text field for gender
-                    decoration: InputDecoration(
-                        labelText: 'Gender (optional) ',
-                        hintText: 'Ex: Female',
-                        hintStyle: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.w200,
-                            color: Colors.grey),
-                        labelStyle: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.bold,
-                            color: Colors.grey),
-                        focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.green))),
-                  ),
-               
+                  // TextField(
+                  //   // Textfeild for Name
+                  //   decoration: InputDecoration(
+                  //       labelText: 'NAME ',
+                  //       hintText: "Ex: John Smith",
+                  //       hintStyle: TextStyle(
+                  //           fontFamily: 'Montserrat',
+                  //           fontWeight: FontWeight.w200,
+                  //           color: Colors.grey),
+                  //       labelStyle: TextStyle(
+                  //           fontFamily: 'Montserrat',
+                  //           fontWeight: FontWeight.bold,
+                  //           color: Colors.grey),
+                  //       focusedBorder: UnderlineInputBorder(
+                  //           borderSide: BorderSide(color: Colors.green))),
+                  // ),
+                  // SizedBox(height: 10.0),
+                  // TextField(
+                  //   // Text field for major
+                  //   decoration: InputDecoration(
+                  //       labelText: 'Major ',
+                  //       hintText: "Ex: Computer Science",
+                  //       hintStyle: TextStyle(
+                  //           fontFamily: 'Montserrat',
+                  //           fontWeight: FontWeight.w200,
+                  //           color: Colors.grey),
+                  //       labelStyle: TextStyle(
+                  //           fontFamily: 'Montserrat',
+                  //           fontWeight: FontWeight.bold,
+                  //           color: Colors.grey),
+                  //       focusedBorder: UnderlineInputBorder(
+                  //           borderSide: BorderSide(color: Colors.green))),
+                  // ),
+                  // SizedBox(height: 10.0),
+                  // TextField(
+                  //   // Textfield for year of graduation
+                  //   decoration: InputDecoration(
+                  //       labelText: 'Year ',
+                  //       hintText: "EX: 2025",
+                  //       hintStyle: TextStyle(
+                  //           fontFamily: 'Montserrat',
+                  //           fontWeight: FontWeight.w200,
+                  //           color: Colors.grey),
+                  //       labelStyle: TextStyle(
+                  //           fontFamily: 'Montserrat',
+                  //           fontWeight: FontWeight.bold,
+                  //           color: Colors.grey),
+                  //       focusedBorder: UnderlineInputBorder(
+                  //           borderSide: BorderSide(color: Colors.green))),
+                  // ),
+                  // TextField(
+                  //   // Text field for gender
+                  //   decoration: InputDecoration(
+                  //       labelText: 'Gender (optional) ',
+                  //       hintText: 'Ex: Female',
+                  //       hintStyle: TextStyle(
+                  //           fontFamily: 'Montserrat',
+                  //           fontWeight: FontWeight.w200,
+                  //           color: Colors.grey),
+                  //       labelStyle: TextStyle(
+                  //           fontFamily: 'Montserrat',
+                  //           fontWeight: FontWeight.bold,
+                  //           color: Colors.grey),
+                  //       focusedBorder: UnderlineInputBorder(
+                  //           borderSide: BorderSide(color: Colors.green))),
+                  // ),
+                  //
                   SizedBox(height: 30.0),
                   Container(
                       // Container that is responsible for the Sign up and go back button
@@ -153,7 +166,9 @@ class _SignupState extends State<Signup> {
                         color: Colors.green,
                         elevation: 7.0,
                         child: GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            _register();
+                          },
                           child: Center(
                             child: Text(
                               'SIGNUP',
@@ -194,4 +209,29 @@ class _SignupState extends State<Signup> {
               )),
         ]));
   }
+
+void _register() async { // Responsible for sign up
+    String email = _emailController.text.trim();
+    String password = _passwordController.text.trim();
+  //  String confirmpassword = _confpasswordController.text.trim();
+    if(3 > 2) {
+      try {
+        final User? user = (await _auth.createUserWithEmailAndPassword(
+            email: email, password: password)).user;
+        setState(() {
+          if (user != null) {
+          //  Fluttertoast.showToast(msg: "user created");
+            Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (context) => ShowProfile()),);
+          }
+        });
+      } catch (e) {
+        //Fluttertoast.showToast(msg: e.toString());
+      }
+    }
+    else{
+     // Fluttertoast.showToast(msg: "Passwords don't match");
+    }
+   }
+  
 }
