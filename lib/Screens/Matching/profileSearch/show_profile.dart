@@ -6,6 +6,9 @@ import 'package:meal_buddies/Screens/Matching/profileSearch/chat.dart';
 
 // This page shows profile
 class ShowProfile extends StatefulWidget{
+
+  final String diningCourt;
+  ShowProfile({required this.diningCourt});
   @override
   _ShowProfileState createState() => _ShowProfileState();
 }
@@ -35,7 +38,7 @@ class _ShowProfileState extends State<ShowProfile> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text("Find people",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                    Text(widget.diningCourt,style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
                     Container(
                       padding: EdgeInsets.only(left: 8,right: 8,top: 2,bottom: 2),
                       height: 30,

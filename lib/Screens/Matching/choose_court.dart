@@ -115,7 +115,7 @@ class _HomePageState extends State<HomePage> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ShowProfile()),
+                MaterialPageRoute(builder: (context) => ShowProfile(diningCourt: items[index].name.toString())),
               );
             },
             child: Center(
