@@ -54,8 +54,9 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     //initializeFlutterFire();
-   
+
   }
+
 //end of firebase initalization
   @override
   Widget build(BuildContext context) {

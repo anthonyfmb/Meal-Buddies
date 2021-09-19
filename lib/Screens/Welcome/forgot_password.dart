@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 /*
   Name: Anthony
   Date: 9/18/2021
-  This class is responsible for ForgetPassword Functionality
+  This class is responsible for ForgetPassword Functionality.
 
  */
 
@@ -17,7 +17,6 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        //resizeToAvoidBottomPadding: false,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[

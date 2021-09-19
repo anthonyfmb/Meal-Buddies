@@ -305,30 +305,15 @@ void _register() async { // Responsible for sign up
 
             });
 
-            // HelperFunctions.saveUserLoggedInSharedPreference(true);
-            // HelperFunctions.saveUserNameSharedPreference(_firstNameController.text
-            //     .replaceAll(new RegExp(r"\s+\b|\b\s"), "") +
-            //     ' ' +
-            //     _lastNameController.text
-            //         .replaceAll(new RegExp(r"\s+\b|\b\s"), ""));
-            // HelperFunctions.saveUserEmailSharedPreference(
-            //     _emailController.text);
-            // HelperFunctions.saveUserIDSharedPreference(
-            //     users.id);
-            // HelperFunctions.saveUserProfileImagePreference(
-            //     "https://www.kindpng.com/picc/m/22-223965_no-profile-picture-icon-circle-member-icon-png.png");
-
-
             Navigator.pushReplacement(
               context, MaterialPageRoute(builder: (context) => HomePage()),);
           }
         });
       } catch (e) {
-        //Fluttertoast.showToast(msg: e.toString());
+
       }
     }
     else{
-     // Fluttertoast.showToast(msg: "Passwords don't match");
     }
    }
   

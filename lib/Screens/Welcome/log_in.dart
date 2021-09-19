@@ -7,7 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 /*
 Author: David, Anthony
 Date: 9/18/2021
-This class is responsible for loggin in.
+This class is responsible for logging in.
 
 */
 
@@ -28,7 +28,7 @@ class _LoginState extends State<Login> {
           email: _emailController.text,
           password: _passwordController.text,
       );
-      
+
 
       Navigator.pushReplacement<void, void>(
         context,
@@ -74,28 +74,7 @@ class _LoginState extends State<Login> {
         print('Wrong password provided for that user.');
       }
     }
-    //   final User? user = (await _firebaseAuth.signInWithEmailAndPassword(
-    //       email: _emailController.text, password: _passwordController.text)).user;
-    //
-    //   if(user!= null){
-    //       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()),);
-    //
-    //   } else {
-    //   AlertDialog inUse = AlertDialog(
-    //     title: Text("Wrong Credentials"),
-    //     content: Text("Please try again."),
-    //     shape:
-    //     RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-    //   );
-    //
-    //   // show the dialog
-    //   showDialog(
-    //     context: context,
-    //     builder: (BuildContext context) {
-    //       return inUse;
-    //     },
-    //   );
-    // }
+
   }
   @override
   Widget build(BuildContext context) {

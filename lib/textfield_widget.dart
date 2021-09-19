@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
+/*
+  Name: David, Anthony, Eric, Rishee
+  Date: 9/19/2021
+  This class help with widgets regarding to Text.
+ */
+
+
 class TextFieldWidget extends StatefulWidget {
   final int maxLines;
   final String label;

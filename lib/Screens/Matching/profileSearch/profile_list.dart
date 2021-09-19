@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 /*
   Name: David, Anthony, Eric, Rishee
   Date: 9/19/2021
-  This class helps with filling out data of people in a list
+  This class helps with filling out data of people in a list.
  */
 
 

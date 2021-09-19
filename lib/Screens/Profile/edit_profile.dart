@@ -7,6 +7,13 @@ import 'package:meal_buddies/textfield_widget.dart';
 import 'package:meal_buddies/button_widget.dart';
 import 'package:meal_buddies/Screens/Profile/profile.dart';
 
+/*
+  Name: David, Anthony, Eric, Rishee
+  Date: 9/19/2021
+  This class help with editing profile.
+ */
+
+
 class EditProfile extends StatefulWidget {
   @override
   _EditProfileState createState() => _EditProfileState();
@@ -68,5 +75,4 @@ class _EditProfileState extends State<EditProfile> {
       );
     },
   );
-
 }
