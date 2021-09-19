@@ -39,7 +39,9 @@ class _EditProfileState extends State<EditProfile> {
         TextFieldWidget(
           label: 'Email',
           text: user.email,
-          onChanged: (email) {}, // constantly refreshes
+          onChanged: (email) {
+            user = UserPreferences.myUser;
+          }, // constantly refreshes
         ),
         const SizedBox(height: 24),
         TextFieldWidget(
