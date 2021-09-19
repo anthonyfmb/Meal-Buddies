@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meal_buddies/Screens/Matching/ui/choose_court.dart';
+import 'package:meal_buddies/Screens/Matching/choose_court.dart';
 import 'package:meal_buddies/Screens/Welcome/forgot_password.dart';
 
 /*
