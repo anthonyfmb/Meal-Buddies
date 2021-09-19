@@ -68,19 +68,28 @@ class _HomePageState extends State<HomePage> {
     // App bar
     return AppBar(
 
-      leading: IconButton(
-        icon: Icon(icon),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => Profile()),
-          );
-        },
-      ),
+      // leading: IconButton(
+      //   icon: Icon(icon),
+      //   onPressed: () {
+      //     Navigator.push(
+      //       context,
+      //       MaterialPageRoute(builder: (context) => Profile()),
+      //     );
+      //   },
+      // ),
       // On Android by default its false
       centerTitle: true,
       title: Text(Constants.name.toString()),
       actions: <Widget>[
+        IconButton(
+            icon: Icon(icon),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Profile()),
+              );
+            },
+        ),
         SizedBox(
           // It means 5 because by out defaultSize = 10
           width: 10,
@@ -97,11 +106,11 @@ class _HomePageState extends State<HomePage> {
   }
 
 
-  _getData() async {
-    Constants.name = await HelperFunctions.getUserNameSharedPreference();
-    Constants.myProfileImg = await HelperFunctions.getUserImageSharedPreference();
-    Constants.email = await HelperFunctions.getUserEmailSharedPreference();
-  }
+  // _getData() async {
+  //   Constants.name = await HelperFunctions.getUserNameSharedPreference();
+  //   Constants.myProfileImg = await HelperFunctions.getUserImageSharedPreference();
+  //   Constants.email = await HelperFunctions.getUserEmailSharedPreference();
+  // }
 
   @override
   Widget build(BuildContext context) {

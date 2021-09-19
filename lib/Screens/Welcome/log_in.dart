@@ -34,10 +34,10 @@ class _LoginState extends State<Login> {
       QuerySnapshot userInfoSnapshot = await DatabaseMethods().getUserInfo(_emailController.text);
 
       // Saves userName, email, and Document ID
-
-      HelperFunctions.saveUserLoggedInSharedPreference(true);
-      HelperFunctions.saveUserEmailSharedPreference(_emailController.text);
-
+      //
+      // HelperFunctions.saveUserLoggedInSharedPreference(true);
+      // HelperFunctions.saveUserEmailSharedPreference(_emailController.text);
+      //
 
 
 
